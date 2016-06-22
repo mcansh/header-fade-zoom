@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
+
+$powerley-orange: #FC6C2B
+$powerley-blue: #324354
+$powerley-green: #1eb273
+$powerley-gray: #8f969d
+$border-color: #f7f7f7
+
+*
+  box-sizing: border-box
+  margin: 0
+
+  &:before, &:after
+    box-sizing: border-box
+
+body
+  margin: 0
+  font-family: 'Montserrat', sans-serif
+  font-size: 16px
+  color: #FFF
+
+.container
+  background:
+    image: linear-gradient(0deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png)
+    size: cover
+    position: center
+  position: absolute
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+nav
+  position: fixed
+  width: 100%
+  top: 0
+  z-index: 3
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  height: 5em
+  &.scroll
+    background: $powerley-blue
+  a
+    color: #FFF
+    text-decoration: none
+    transition: all .3s
+    margin: 0 10px
+    text-transform: uppercase
+    &:last-of-type
+      margin-right: 60px
+    &:hover
+      color: #DDD
+
+header
+  position: relative
+  height: 60vh
+  // z-index: 2
+  background: $powerley-blue
+
+  h1
+    font-size: 4em
+    text-transform: uppercase
+    text-align: center
+#about
+  background: #E7E3DA
+  height: 70em
+  padding: 5em 0

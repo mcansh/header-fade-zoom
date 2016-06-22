@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/* line 9, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+* {
+  box-sizing: border-box;
+  margin: 0; }
+  /* line 13, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+  *:before, *:after {
+    box-sizing: border-box; }
+
+/* line 16, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #FFF; }
+
+/* line 22, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+.container {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 34, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 5em; }
+  /* line 43, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+  nav.scroll {
+    background: #324354; }
+  /* line 45, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+  nav a {
+    color: #FFF;
+    text-decoration: none;
+    transition: all .3s;
+    margin: 0 10px;
+    text-transform: uppercase; }
+    /* line 51, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+    nav a:last-of-type {
+      margin-right: 60px; }
+    /* line 53, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+    nav a:hover {
+      color: #DDD; }
+
+/* line 56, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+header {
+  position: relative;
+  height: 60vh;
+  background: #324354; }
+  /* line 62, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+  header h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center; }
+
+/* line 66, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+#about {
+  background: #E7E3DA;
+  height: 70em;
+  padding: 5em 0; }
+
+/*# sourceMappingURL=style.css.map */
