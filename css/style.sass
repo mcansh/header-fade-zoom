@@ -1,10 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
-
 $powerley-orange: #FC6C2B
 $powerley-blue: #324354
 $powerley-green: #1eb273
 $powerley-gray: #8f969d
 $border-color: #f7f7f7
+$dark-bg: linear-gradient(0deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55))
 
 *
   box-sizing: border-box
@@ -15,13 +14,16 @@ $border-color: #f7f7f7
 
 body
   margin: 0
-  font-family: 'Montserrat', sans-serif
-  font-size: 16px
-  color: #FFF
+  font:
+    family: "brandon-grotesque", brandon-grotesque, sans-serif
+    size: 16px
+  color: white
+  &.fixed
+    overflow: hidden
 
 .container
   background:
-    image: linear-gradient(0deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png)
+    image: $dark-bg, url(http://www.powerley.com/media/1207/manoj-office-hero.png)
     size: cover
     position: center
   position: absolute
@@ -40,32 +42,106 @@ nav
   justify-content: flex-end
   align-items: center
   height: 5em
+  @media (max-width: 800px)
+    .nav-link-container
+      top: -100vh
+      position: relative
+    &.open
+      position: absolute
+      height: 100vh
+      background: $powerley-blue
+      .nav-link-container
+        display: flex
+        flex-direction: column
+        top: 0
+        position: relative
+        justify-content: center
+        width: 100vw
+        left: 0
+        height: 100vh
+        a
+          font-size: 2em
+          margin: 15px 0 15px 20px
+  .hammy-container
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 99999
+    margin: calc(5em - 70px) 0
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after
+      background: white
+    @media (min-width: 801px)
+      display: none
   &.scroll
     background: $powerley-blue
-  a
-    color: #FFF
-    text-decoration: none
-    transition: all .3s
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)
+  .nav-link-container a
+    color: white
+    transition: all .3s ease-in-out
     margin: 0 10px
-    text-transform: uppercase
+    text:
+      transform: uppercase
+      decoration: none
     &:last-of-type
       margin-right: 60px
-    &:hover
-      color: #DDD
+    &:hover,
+    &.active
+      color: $powerley-green
 
 header
   position: relative
-  height: 60vh
-  // z-index: 2
+  min-height: 60vh
+  max-height: 100vh
   background: $powerley-blue
   transform: scale(1)
   overflow: hidden
+  @media (max-width: 800px)
+    height: 85vh
 
   h1
     font-size: 4em
-    text-transform: uppercase
-    text-align: center
+    text:
+      transform: uppercase
+      align: center
 #about
-  background: #E7E3DA
+  background: #252b33
   height: 70em
   padding: 5em 0
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: "open-sans"
+  flex-direction: column
+
+  > *
+    margin: 20px 0
+
+  a.btn
+    // border: 1px solid #f36
+    border: 1px solid $powerley-green
+    color: #f36
+    font-size: 15px
+    font-family: "brandon-grotesque", brandon-grotesque, sans-serif
+    letter-spacing: .125em
+    font-weight: 700
+    padding: 20px 40px
+    border-radius: 5px
+    color: #fff
+    line-height: 1em
+    font-weight: 700
+    text-transform: uppercase
+    transition: background .3s
+    &:hover
+      // background: #f36
+      background: $powerley-green
+
+
+
+a
+  color: $powerley-green
+  text-decoration: none
+  transition: 300ms all ease-in-out
+  &:hover
+    color: $powerley-orange

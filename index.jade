@@ -10,6 +10,7 @@ html(lang="en")
     meta(name="theme-color", content="######")
     link(rel="shortcut icon" href="img/favicon.ico")
     link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="css/hamburgers.css")
     // Apple Touch Icons
     link(rel="shortcut icon" href="assets/favicon/png/favicon-32.png" sizes="32x32")
     link(rel="apple-touch-icon-precomposed" sizes="228x228" href="assets/favicon/png/favicon-228.png")
@@ -28,20 +29,35 @@ html(lang="en")
     meta(name="twitter:description" content="Logan McAnsh")
     meta(name="twitter:image" content="SOME URL HERE")
     
+    //- typekit
+    script(src="https://use.typekit.net/tru7kee.js")
+    script.
+      try{Typekit.load({ async: true });}catch(e){}
     
     script(src="http://s.codepen.io/assets/libs/modernizr.js")
     
   body
     nav
-      a(href="") Platform
-      a(href="") Implementation
-      a(href="") About
-      a(href="") Resources
+      .hammy-container
+        button.hamburger.hamburger--collapse(type="button")
+          span.hamburger-box
+            span.hamburger-inner
+      .nav-link-container
+        a(href="") Platform
+        a(href="") Implementation
+        a(href="") About
+        a(href="") Resources
     header
       .container
-        h1 Opacity on scroll
+        h1 Header Zoom and Fade on Scroll
     section#about
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel diam lacus. Nam quis ipsum nec massa sagittis scelerisque ac non urna. Phasellus posuere orci ac tellus interdum mollis eu vitae mi. Aliquam nec ante lobortis, suscipit lectus eu, dignissim ante. Nam imperdiet quis eros.
+      h3 This is a remade version of 
+        a(href="https://blog.invisionapp.com") Invision's
+        |  header that zooms and fades on scroll.
+      
+      p It's pretty rad.
+      
+      a.btn(href="") View the repo
 
 
     script(src="js/jquery-3.0.0.min.js")

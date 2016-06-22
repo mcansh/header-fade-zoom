@@ -1,20 +1,17 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-/* line 9, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
 * {
   box-sizing: border-box;
   margin: 0; }
-  /* line 13, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
   *:before, *:after {
     box-sizing: border-box; }
 
-/* line 16, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "brandon-grotesque", brandon-grotesque, sans-serif;
   font-size: 16px;
-  color: #FFF; }
+  color: white; }
+  body.fixed {
+    overflow: hidden; }
 
-/* line 22, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
 .container {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
   background-size: cover;
@@ -26,7 +23,6 @@ body {
   justify-content: center;
   align-items: center; }
 
-/* line 34, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
 nav {
   position: fixed;
   width: 100%;
@@ -36,40 +32,101 @@ nav {
   justify-content: flex-end;
   align-items: center;
   height: 5em; }
-  /* line 43, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+  @media (max-width: 800px) {
+    nav .nav-link-container {
+      top: -100vh;
+      position: relative; }
+    nav.open {
+      position: absolute;
+      height: 100vh;
+      background: #324354; }
+      nav.open .nav-link-container {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        position: relative;
+        justify-content: center;
+        width: 100vw;
+        left: 0;
+        height: 100vh; }
+        nav.open .nav-link-container a {
+          font-size: 2em;
+          margin: 15px 0 15px 20px; } }
+  nav .hammy-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    margin: calc(5em - 70px) 0; }
+    nav .hammy-container .hamburger-inner,
+    nav .hammy-container .hamburger-inner::before,
+    nav .hammy-container .hamburger-inner::after {
+      background: white; }
+    @media (min-width: 801px) {
+      nav .hammy-container {
+        display: none; } }
   nav.scroll {
-    background: #324354; }
-  /* line 45, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
-  nav a {
-    color: #FFF;
-    text-decoration: none;
-    transition: all .3s;
+    background: #324354;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
+  nav .nav-link-container a {
+    color: white;
+    transition: all .3s ease-in-out;
     margin: 0 10px;
-    text-transform: uppercase; }
-    /* line 51, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
-    nav a:last-of-type {
+    text-transform: uppercase;
+    text-decoration: none; }
+    nav .nav-link-container a:last-of-type {
       margin-right: 60px; }
-    /* line 53, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
-    nav a:hover {
-      color: #DDD; }
+    nav .nav-link-container a:hover, nav .nav-link-container a.active {
+      color: #1eb273; }
 
-/* line 56, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
 header {
   position: relative;
-  height: 60vh;
+  min-height: 60vh;
+  max-height: 100vh;
   background: #324354;
   transform: scale(1);
   overflow: hidden; }
-  /* line 64, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+  @media (max-width: 800px) {
+    header {
+      height: 85vh; } }
   header h1 {
     font-size: 4em;
     text-transform: uppercase;
     text-align: center; }
 
-/* line 68, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
 #about {
-  background: #E7E3DA;
+  background: #252b33;
   height: 70em;
-  padding: 5em 0; }
+  padding: 5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "open-sans";
+  flex-direction: column; }
+  #about > * {
+    margin: 20px 0; }
+  #about a.btn {
+    border: 1px solid #1eb273;
+    color: #f36;
+    font-size: 15px;
+    font-family: "brandon-grotesque", brandon-grotesque, sans-serif;
+    letter-spacing: .125em;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 5px;
+    color: #fff;
+    line-height: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background .3s; }
+    #about a.btn:hover {
+      background: #1eb273; }
+
+a {
+  color: #1eb273;
+  text-decoration: none;
+  transition: 300ms all ease-in-out; }
+  a:hover {
+    color: #FC6C2B; }
 
 /*# sourceMappingURL=style.css.map */

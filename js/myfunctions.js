@@ -23,5 +23,13 @@ $(window).on('scroll', function () {
       $('nav').addClass( 'scroll' );
     }
 
+});
 
+
+var $hamburger = $(".hamburger");
+$hamburger.on("click", function(e) {
+  $hamburger.toggleClass("is-active");
+  // Do something else, like open/close menu
+  $('nav').toggleClass( 'open' );
+  $('body').toggleClass( 'fixed' );
 });
