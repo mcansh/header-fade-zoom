@@ -57,14 +57,16 @@ nav {
 header {
   position: relative;
   height: 60vh;
-  background: #324354; }
-  /* line 62, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+  background: #324354;
+  transform: scale(1);
+  overflow: hidden; }
+  /* line 64, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
   header h1 {
     font-size: 4em;
     text-transform: uppercase;
     text-align: center; }
 
-/* line 66, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
+/* line 68, /Users/loganmcansh/Desktop/JFC JUST WORK/css/style.sass */
 #about {
   background: #E7E3DA;
   height: 70em;
