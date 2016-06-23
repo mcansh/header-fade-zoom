@@ -1,6 +1,7 @@
 var header = $('.container');
 var range = 200;
 var pContainerHeight = $('header .container').height();
+var width = $(window).width();
 
 $(window).scroll(function(){
 
@@ -24,13 +25,13 @@ $(window).scroll(function(){
       $('nav').addClass('scroll');
     }
 
+    if ((width >= 800)) {
+      if (wScroll <= pContainerHeight) {
 
-    if (wScroll <= pContainerHeight) {
-
-      $('header .container h1').css({
-        'transform' : 'translate(0px, '+ wScroll /2 +'%)'
-      });
-
+        $('header .container h1').css({
+          'transform' : 'translate(0px, '+ wScroll /2 +'%)'
+        });
+      }
     }
 
 });
