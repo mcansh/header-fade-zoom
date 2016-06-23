@@ -20,7 +20,7 @@ $(window).on('scroll', function () {
       $('nav').removeClass( 'scroll' );
     } else if ( calc < '0' ) {
       header.css( 'opacity', '0' );
-      $('nav').addClass( 'scroll' );
+      $('nav.mobile').addClass( 'scroll' );
     }
 
 });
@@ -30,6 +30,6 @@ var $hamburger = $(".hamburger");
 $hamburger.on("click", function(e) {
   $hamburger.toggleClass("is-active");
   // Do something else, like open/close menu
-  $('nav').toggleClass( 'open' );
-  $('body').toggleClass( 'fixed' );
+  $('nav.mobile').toggleClass('open');
+  $('body').toggleClass('fixed');
 });

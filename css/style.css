@@ -1,3 +1,93 @@
+nav a {
+  color: white;
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none; }
+  nav a:hover, nav a.active {
+    color: #1eb273; }
+
+nav:not(.mobile) {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5em;
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out; }
+  @media (max-width: 799px) {
+    nav:not(.mobile) {
+      visibility: hidden; } }
+  nav:not(.mobile).scroll {
+    background: #324354;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
+  nav:not(.mobile) a {
+    margin: 0 10px; }
+    nav:not(.mobile) a:last-of-type {
+      margin-right: 60px; }
+
+nav.mobile {
+  height: 5em;
+  position: fixed;
+  visibility: visible;
+  z-index: 998; }
+  nav.mobile.open .nav-link-container {
+    opacity: 1;
+    visibility: visible;
+    height: 100vh;
+    background: #324354;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    nav.mobile.open .nav-link-container a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  nav.mobile.scroll {
+    background: #324354;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
+  nav.mobile .nav-link-container {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+    nav.mobile .nav-link-container a {
+      margin: 20px 0 20px 20px;
+      font-size: 2em;
+      display: none; }
+  nav.mobile .hammy-container {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    margin: calc(5em - 70px) 0; }
+  @media (min-width: 800px) {
+    nav.mobile {
+      visibility: hidden; } }
+
 * {
   box-sizing: border-box;
   margin: 0; }
@@ -13,89 +103,30 @@ body {
     overflow: hidden; }
 
 .container {
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
   background-size: cover;
   background-position: center;
   position: absolute;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center; }
-
-nav:not(mobile) {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 3;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 5em;
-  visibility: visible;
-  transition: 300ms all ease-in-out; }
-  @media (max-width: 799px) {
-    nav:not(mobile) {
-      visibility: hidden; } }
-  nav:not(mobile).scroll {
-    background: #324354;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
-  nav:not(mobile) a {
-    color: white;
-    transition: 300ms all ease-in-out;
-    margin: 0 10px;
-    text-transform: uppercase;
-    text-decoration: none; }
-    nav:not(mobile) a:last-of-type {
-      margin-right: 60px; }
-    nav:not(mobile) a:hover, nav:not(mobile) a.active {
-      color: #1eb273; }
-
-nav.mobile {
-  height: 5em;
-  position: fixed;
-  transition: 300ms all ease-in-out;
-  visibility: visible; }
-  nav.mobile.open .nav-link-container {
-    opacity: 1;
-    height: 100vh;
-    background: #324354;
-    display: flex;
-    justify-content: center;
-    flex-direction: column; }
-    nav.mobile.open .nav-link-container a {
-      opacity: 1; }
-  nav.mobile.scroll {
-    background: #324354;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
-  nav.mobile .nav-link-container {
-    opacity: 0;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    bottom: 0;
-    transition: opacity 300ms ease-in-out; }
-    nav.mobile .nav-link-container a {
-      margin: 20px 0 20px 20px;
-      font-size: 2em;
-      opacity: 0;
-      transition: opacity 300ms ease-in-out; }
-  nav.mobile .hammy-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    margin: calc(5em - 70px) 0; }
-  @media (min-width: 800px) {
-    nav.mobile {
-      visibility: hidden; } }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 header {
   position: relative;
   min-height: 60vh;
   max-height: 100vh;
   background: #324354;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   overflow: hidden; }
   @media (max-width: 800px) {
     header {
@@ -109,11 +140,20 @@ header {
   background: #252b33;
   height: 70em;
   padding: 5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "open-sans";
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center; }
   #about > * {
     margin: 20px 0; }
@@ -130,6 +170,7 @@ header {
     line-height: 1em;
     font-weight: 700;
     text-transform: uppercase;
+    -webkit-transition: background .3s;
     transition: background .3s; }
     #about a.btn:hover {
       background: #1eb273; }
@@ -137,8 +178,8 @@ header {
 a {
   color: #1eb273;
   text-decoration: none;
+  -webkit-transition: 300ms all ease-in-out;
   transition: 300ms all ease-in-out; }
   a:hover {
     color: #FC6C2B; }
-
 /*# sourceMappingURL=style.css.map */

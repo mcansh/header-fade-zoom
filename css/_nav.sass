@@ -1,4 +1,15 @@
-nav:not(mobile)
+nav
+  a
+    color: white
+    transition: 300ms all ease-in-out
+    text:
+      transform: uppercase
+      decoration: none
+    &:hover,
+    &.active
+      color: $powerley-green
+
+nav:not(.mobile)
   position: fixed
   width: 100%
   top: 0
@@ -7,7 +18,6 @@ nav:not(mobile)
   justify-content: flex-end
   align-items: center
   height: 5em
-  visibility: visible
   transition: 300ms all ease-in-out
   @media (max-width: 799px)
     visibility: hidden
@@ -16,54 +26,53 @@ nav:not(mobile)
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)
 
   a
-    color: white
-    transition: 300ms all ease-in-out
     margin: 0 10px
-    text:
-      transform: uppercase
-      decoration: none
     &:last-of-type
       margin-right: 60px
-    &:hover,
-    &.active
-      color: $powerley-green
+
+
 
 
 nav.mobile
   height: 5em
   position: fixed
-  transition: 300ms all ease-in-out
+  // transition: 300ms all ease-in-out
   visibility: visible
+  z-index: 998
   &.open
     .nav-link-container
-      // visibility: visible
       opacity: 1
+      visibility: visible
       height: 100vh
       background: $powerley-blue
       display: flex
       justify-content: center
       flex-direction: column
       a
-        opacity: 1
+        // opacity: 1
+        display: flex
   &.scroll
     background: $powerley-blue
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)
 
   .nav-link-container
-    // visibility: hidden
     opacity: 0
     height: 100vh
     width: 100vw
     position: fixed
+    top: 0
+    left: 0
+    right: 0
     bottom: 0
-    transition: opacity 300ms ease-in-out
+    transition: all .3s cubic-bezier(.455, .03, .515, .955)
     a
       margin: 20px 0 20px 20px
       font-size: 2em
-      opacity: 0
-      transition: opacity 300ms ease-in-out
+      // opacity: 0
+      display: none
 
   .hammy-container
+    z-index: 999
     position: absolute
     top: 0
     left: 0
