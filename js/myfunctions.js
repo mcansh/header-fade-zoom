@@ -20,7 +20,7 @@ $(window).on('scroll', function () {
       $('nav').removeClass( 'scroll' );
     } else if ( calc < '0' ) {
       header.css( 'opacity', '0' );
-      $('nav.mobile').addClass( 'scroll' );
+      $('nav').addClass( 'scroll' );
     }
 
 });
