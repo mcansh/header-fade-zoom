@@ -25,7 +25,8 @@ nav:not(.mobile) {
           justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  z-index: 1; }
   @media (max-width: 799px) {
     nav:not(.mobile) {
       visibility: hidden; } }
@@ -105,39 +106,40 @@ body {
   body.fixed {
     overflow: hidden; }
 
-.container {
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
 header {
   position: relative;
   min-height: 60vh;
-  max-height: 100vh;
+  width: 100vw;
   background: #324354;
-  -webkit-transform: scale(1);
-          transform: scale(1);
   overflow: hidden; }
   @media (max-width: 800px) {
     header {
       height: 85vh; } }
-  header h1 {
+  header .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%; }
+    header .bg .img {
+      background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
+      background-position: center;
+      background-size: cover;
+      height: 110%;
+      width: 110%;
+      left: -10%;
+      top: 0; }
+  header .header-content h1 {
     font-size: 4em;
     text-transform: uppercase;
-    text-align: center; }
+    text-align: center;
+    top: 50%;
+    margin-top: -50px;
+    position: absolute;
+    width: 100%; }
 
 #about {
   background: #252b33;

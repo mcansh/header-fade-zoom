@@ -1,6 +1,6 @@
 @import "_vars"
 @import "_nav"
-
+@import "bourbon"
 
 ::selection
   background: $powerley-orange
@@ -23,33 +23,54 @@ body
   &.fixed
     overflow: hidden
 
-.container
-  background:
-    image: $dark-bg, url(http://www.powerley.com/media/1207/manoj-office-hero.png)
-    size: cover
-    position: center
-  position: absolute
-  width: 100%
-  height: 100%
-  display: flex
-  justify-content: center
-  align-items: center
-
 header
   position: relative
   min-height: 60vh
-  max-height: 100vh
+  width: 100vw
   background: $powerley-blue
-  transform: scale(1)
   overflow: hidden
   @media (max-width: 800px)
     height: 85vh
 
-  h1
-    font-size: 4em
-    text:
-      transform: uppercase
-      align: center
+  .bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    +size(100%)
+    .img
+      background:
+        image: linear-gradient(0deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png)
+        position: center
+        size: cover
+      height: 110%
+      width: 110%
+      left: -10%
+      top: 0
+
+  // .container
+    // background:
+      image: $dark-bg, url(http://www.powerley.com/media/1207/manoj-office-hero.png)
+      size: cover
+      position: center
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .header-content
+    h1
+      font-size: 4em
+      text:
+        transform: uppercase
+        align: center
+      top: 50%
+      margin-top: -50px
+      position: absolute
+      width: 100%
 #about
   background: #252b33
   height: 70em
