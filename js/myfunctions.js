@@ -1,16 +1,17 @@
 var header = $('.container');
 var range = 200;
+var pContainerHeight = $('header .container').height();
 
-$(window).on('scroll', function () {
+$(window).scroll(function(){
 
-    var scrollTop = $(this).scrollTop();
+    var wScroll = $(this).scrollTop();
     var offset = header.offset().top;
     var height = header.outerHeight();
     offset = offset + height / 1.5;
-    var calc = 1 - (scrollTop - offset + range) / range;
+    var calc = 1 - (wScroll - offset + range) / range;
 
 
-    var size = (scrollTop/3000)+1;
+    var size = (wScroll/3000)+1;
     header.css({ 'opacity': calc });
     header.css('transform', 'scale('+size+')');
 
@@ -21,6 +22,15 @@ $(window).on('scroll', function () {
     } else if ( calc < '0' ) {
       header.css( 'opacity', '0' );
       $('nav').addClass('scroll');
+    }
+
+
+    if (wScroll <= pContainerHeight) {
+
+      $('header .container h1').css({
+        'transform' : 'translate(0px, '+ wScroll /2 +'%)'
+      });
+
     }
 
 });
