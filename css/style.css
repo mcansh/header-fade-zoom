@@ -1,3 +1,7 @@
+nav.scroll {
+  background: #324354;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
+
 nav a {
   color: white;
   -webkit-transition: 300ms all ease-in-out;
@@ -59,9 +63,6 @@ nav.mobile {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-  nav.mobile.scroll {
-    background: #324354;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
   nav.mobile .nav-link-container {
     opacity: 0;
     height: 100vh;
