@@ -1,21 +1,22 @@
-nav.scroll {
-  background: #324354;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
-
-nav a {
-  color: white;
-  -webkit-transition: 300ms all ease-in-out;
-  transition: 300ms all ease-in-out;
-  text-transform: uppercase;
-  text-decoration: none; }
-  nav a:hover, nav a.active {
-    color: #1eb273; }
+nav {
+  width: 100vw;
+  height: 5em;
+  position: fixed;
+  visibility: visible; }
+  nav.scroll {
+    background: #324354;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
+  nav a {
+    color: white;
+    -webkit-transition: 300ms all ease-in-out;
+    transition: 300ms all ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none; }
+    nav a:hover, nav a.active {
+      color: #1eb273; }
 
 nav:not(.mobile) {
-  position: fixed;
-  width: 100%;
   top: 0;
-  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,24 +25,16 @@ nav:not(.mobile) {
           justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  height: 5em;
-  -webkit-transition: 300ms all ease-in-out;
-  transition: 300ms all ease-in-out; }
+          align-items: center; }
   @media (max-width: 799px) {
     nav:not(.mobile) {
       visibility: hidden; } }
-  nav:not(.mobile).scroll {
-    background: #324354;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15); }
   nav:not(.mobile) a {
     margin: 0 10px; }
     nav:not(.mobile) a:last-of-type {
       margin-right: 60px; }
 
 nav.mobile {
-  height: 5em;
-  position: fixed;
   visibility: visible;
   z-index: 998; }
   nav.mobile.open .nav-link-container {
@@ -60,11 +53,11 @@ nav.mobile {
         -ms-flex-direction: column;
             flex-direction: column; }
     nav.mobile.open .nav-link-container a {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
+      opacity: 1;
+      visibility: visible; }
   nav.mobile .nav-link-container {
     opacity: 0;
+    visibility: hidden;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -75,19 +68,28 @@ nav.mobile {
     -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
     nav.mobile .nav-link-container a {
-      margin: 20px 0 20px 20px;
+      margin: 20px 0;
+      padding: 0 20px;
       font-size: 2em;
-      display: none; }
+      opacity: 0;
+      visibility: hidden; }
   nav.mobile .hammy-container {
     z-index: 999;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99999;
     margin: calc(5em - 70px) 0; }
   @media (min-width: 800px) {
     nav.mobile {
       visibility: hidden; } }
+
+::-moz-selection {
+  background: #FC6C2B;
+  color: white; }
+
+::selection {
+  background: #FC6C2B;
+  color: white; }
 
 * {
   box-sizing: border-box;
