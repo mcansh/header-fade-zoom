@@ -12,7 +12,7 @@
   transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
   transition-property: opacity, filter, -webkit-filter;
-  transition-duration: 0.15s;
+  transition-duration: 300ms;
   transition-timing-function: linear;
   font: inherit;
   color: inherit;
@@ -37,7 +37,7 @@
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #000;
+    background-color: #FC6C2B;
     border-radius: 4px;
     position: absolute;
     transition-property: -webkit-transform;

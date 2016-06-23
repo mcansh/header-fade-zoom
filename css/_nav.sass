@@ -1,0 +1,77 @@
+nav:not(mobile)
+  position: fixed
+  width: 100%
+  top: 0
+  z-index: 3
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  height: 5em
+  transition: 300ms all ease-in-out
+  @media (max-width: 799px)
+    visibility: hidden
+  &.scroll
+    background: $powerley-blue
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)
+
+  a
+    color: white
+    transition: 300ms all ease-in-out
+    margin: 0 10px
+    text:
+      transform: uppercase
+      decoration: none
+    &:last-of-type
+      margin-right: 60px
+    &:hover,
+    &.active
+      color: $powerley-green
+
+
+nav.mobile
+  height: 5em
+  position: fixed
+  transition: 300ms all ease-in-out
+  visibility: visible
+  &.open
+    .nav-link-container
+      // visibility: visible
+      opacity: 1
+      height: 100vh
+      background: $powerley-blue
+      display: flex
+      justify-content: center
+      flex-direction: column
+      a
+        opacity: 1
+  &.scroll
+    background: $powerley-blue
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)
+
+  .nav-link-container
+    // visibility: hidden
+    opacity: 0
+    height: 100vh
+    width: 100vw
+    position: fixed
+    bottom: 0
+    transition: opacity 300ms ease-in-out
+    a
+      margin: 20px 0 20px 20px
+      font-size: 2em
+      opacity: 0
+      transition: opacity 300ms ease-in-out
+
+
+
+
+
+  .hammy-container
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 99999
+    margin: calc(5em - 70px) 0
+
+  @media (min-width: 800px)
+    visibility: hidden

@@ -33,62 +33,7 @@ body
   justify-content: center
   align-items: center
 
-nav
-  position: fixed
-  width: 100%
-  top: 0
-  z-index: 3
-  display: flex
-  justify-content: flex-end
-  align-items: center
-  height: 5em
-  @media (max-width: 800px)
-    .nav-link-container
-      top: -100vh
-      position: relative
-    &.open
-      position: absolute
-      height: 100vh
-      background: $powerley-blue
-      .nav-link-container
-        display: flex
-        flex-direction: column
-        top: 0
-        position: relative
-        justify-content: center
-        width: 100vw
-        left: 0
-        height: 100vh
-        a
-          font-size: 2em
-          margin: 15px 0 15px 20px
-  .hammy-container
-    position: absolute
-    top: 0
-    left: 0
-    z-index: 99999
-    margin: calc(5em - 70px) 0
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after
-      background: white
-    @media (min-width: 801px)
-      display: none
-  &.scroll
-    background: $powerley-blue
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)
-  .nav-link-container a
-    color: white
-    transition: all .3s ease-in-out
-    margin: 0 10px
-    text:
-      transform: uppercase
-      decoration: none
-    &:last-of-type
-      margin-right: 60px
-    &:hover,
-    &.active
-      color: $powerley-green
+@import "_nav"
 
 header
   position: relative
