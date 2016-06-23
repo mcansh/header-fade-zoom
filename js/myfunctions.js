@@ -2,25 +2,20 @@ $(document).ready(function() {
 
   var header = $('header');
   var header_img = $('header .bg');
+  var nav = $('nav');
   var range = 200;
   var pContainerHeight = $('header').height();
   var width = $(window).width();
-  var about = $('#about');
+  var about = $('section').offset();
+  var $window = $(window);
 
-  $(window).scroll(function(){
+  $window.scroll(function(){
 
       var wScroll = $(this).scrollTop();
       var offset = header.offset().top;
       var height = header.outerHeight();
-      var $window = $(window);
       offset = offset + height / 1.5;
       var calc = 1 - (wScroll - offset + range) / range;
-
-      $window.scroll(function() {
-        if ($window.scrollTop() >= about.top) {
-            $("nav").addClass("scroll");
-        }
-      });
 
 
       var size = (wScroll/3000)+1;
@@ -53,4 +48,14 @@ $(document).ready(function() {
     $('nav.mobile').toggleClass('open');
     $('body').toggleClass('fixed');
   });
+
+  $window.scroll(function(){
+    if ($window.scrollTop() >= about.top-40) {
+      nav.addClass("scroll");
+    } else {
+      nav.removeClass("scroll");
+    }
+  });
+
+
 });
