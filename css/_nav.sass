@@ -44,12 +44,14 @@ nav.mobile
       height: 100vh
       background: $powerley-blue
       display: flex
-      justify-content: center
+      justify-content: flex-start
       flex-direction: column
       a
         opacity: 1
         visibility: visible
         // display: flex
+        &:first-of-type
+          margin-top: 4.6em
 
   .nav-link-container
     opacity: 0
@@ -65,7 +67,7 @@ nav.mobile
     a
       margin: 20px 0
       padding: 0 20px
-      font-size: 2em
+      font-size: 1.5em
       opacity: 0
       visibility: hidden
       // display: none
