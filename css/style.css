@@ -143,8 +143,8 @@ header {
             transform: translate(50%, -10%); }
     @media (max-width: 800px) {
       header .header-content {
-        -webkit-transform: translate(0%, 0%);
-                transform: translate(0%, 0%);
+        -webkit-transform: translate(0px, 30px);
+                transform: translate(0px, 30px);
         position: static;
         width: 100%;
         display: -webkit-box;
