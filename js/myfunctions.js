@@ -20,6 +20,7 @@ $(document).ready(function() {
 
       var size = (wScroll/3000)+1;
       header_img.css({ 'opacity': calc });
+      $('header .header-content').css({ 'opacity': calc });
       header_img.css('transform', 'scale('+size+')');
 
 
@@ -32,8 +33,8 @@ $(document).ready(function() {
       if ((width >= 800)) {
         if (wScroll <= pContainerHeight) {
 
-          $('header h1').css({
-            'transform' : 'translate(0px, '+ wScroll /2 +'%)'
+          $('header .header-content h1').css({
+            'transform' : 'translate(0px, '+ wScroll /6 +'%)'
           });
         }
       }

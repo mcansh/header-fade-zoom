@@ -8,7 +8,7 @@
 
 
 *
-  box-sizing: border-box
+  // box-sizing: border-box
   margin: 0
 
   &:before, &:after
@@ -41,7 +41,7 @@ header
     +size(100%)
     .img
       background:
-        image: linear-gradient(0deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png)
+        image: $dark-bg, url(http://www.powerley.com/media/1207/manoj-office-hero.png)
         position: center
         size: cover
       height: 110%
@@ -49,19 +49,12 @@ header
       left: -10%
       top: 0
 
-  // .container
-    // background:
-      image: $dark-bg, url(http://www.powerley.com/media/1207/manoj-office-hero.png)
-      size: cover
-      position: center
-    position: absolute
-    width: 100%
-    height: 100%
-    display: flex
-    justify-content: center
-    align-items: center
-
   .header-content
+    width: 90%
+    max-width: 700px
+    height: 100%
+    position: absolute
+    transform: translate(50%, -10%)
     h1
       font-size: 4em
       text:
