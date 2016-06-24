@@ -55,6 +55,13 @@ header
     height: 100%
     position: absolute
     transform: translate(50%, -10%)
+    @media (max-width: 800px)
+      transform: translate(0%, 0%)
+      position: static
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
     h1
       font-size: 4em
       text:
@@ -64,6 +71,8 @@ header
       margin-top: -50px
       position: absolute
       width: 100%
+      @media (max-width: 800px)
+        position: static
 #about
   background: #252b33
   height: 70em
