@@ -51,18 +51,10 @@ $(document).ready(function() {
   });
 
   $window.scroll(function(){
-    if ($window.scrollTop() >= about.top + (-110)) {
+    if ($window.scrollTop() >= about.top + (-100)) {
       nav.addClass("scroll");
     } else {
       nav.removeClass("scroll");
-    }
-  });
-
-  $window.scroll(function(){
-    if ($window.scrollTop() >= about.top + 40) {
-      nav.css('box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)');
-    } else {
-      nav.css('box-shadow: none');
     }
   });
 

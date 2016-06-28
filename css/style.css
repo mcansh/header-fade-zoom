@@ -5,9 +5,12 @@ nav {
   visibility: visible;
   background: transparent;
   -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out; }
+  transition: all 300ms ease-in-out;
+  box-shadow: 0px 1px 5px transparent; }
   nav.scroll {
-    background: #324354; }
+    background: #324354;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    z-index: 99; }
   nav a {
     color: white;
     -webkit-transition: 300ms all ease-in-out;
