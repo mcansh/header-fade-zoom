@@ -129,8 +129,8 @@ header {
     height: 100%;
     width: 100%; }
     header .bg .img {
-      background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(http://www.powerley.com/media/1207/manoj-office-hero.png);
+      background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../manoj-office-hero.png);
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../manoj-office-hero.png);
       background-position: center;
       background-size: cover;
       height: 110%;
