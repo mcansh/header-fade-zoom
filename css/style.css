@@ -119,7 +119,7 @@ header {
   overflow: hidden; }
   @media (max-width: 800px) {
     header {
-      height: 85vh; } }
+      min-height: 85vh; } }
   header .bg {
     position: absolute;
     top: 0;
@@ -148,17 +148,8 @@ header {
       header .header-content {
         -webkit-transform: translate(0px, 30px);
                 transform: translate(0px, 30px);
-        position: static;
         width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; } }
+        bottom: 0; } }
     header .header-content h1 {
       font-size: 4em;
       text-transform: uppercase;
@@ -167,9 +158,22 @@ header {
       margin-top: -50px;
       position: absolute;
       width: 100%; }
+      @media (max-width: 360px) {
+        header .header-content h1 {
+          font-size: 3em; } }
       @media (max-width: 800px) {
         header .header-content h1 {
-          position: static; } }
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          height: 100%;
+          top: 0; } }
 
 #about {
   background: #252b33;

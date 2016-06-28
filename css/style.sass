@@ -27,7 +27,7 @@ header
   background: $powerley-blue
   overflow: hidden
   @media (max-width: 800px)
-    height: 85vh
+    min-height: 85vh
 
   .bg
     position: absolute
@@ -54,22 +54,27 @@ header
     transform: translate(50%, -10%)
     @media (max-width: 800px)
       transform: translate(0px, 30px)
-      position: static
       width: 100%
-      display: flex
-      justify-content: center
-      align-items: center
+      bottom: 0
     h1
       font-size: 4em
       text:
         transform: uppercase
         align: center
+
+      @media (max-width: 360px)
+        font-size: 3em
+
       top: 50%
       margin-top: -50px
       position: absolute
       width: 100%
       @media (max-width: 800px)
-        position: static
+        justify-content: center
+        align-items: center
+        display: flex
+        height: 100%
+        top: 0
 #about
   background: #252b33
   height: 70em
