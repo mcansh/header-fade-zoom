@@ -1,3 +1,4 @@
+include includes/powerley
 doctype html
 html(lang="en")
   head
@@ -19,23 +20,28 @@ html(lang="en")
     meta(name="twitter:image" content="SOME URL HERE")
     
     //- typekit
-    script(src="https://use.typekit.net/tru7kee.js")
     script.
-      try{Typekit.load({ async: true });}catch(e){}
+      !function(e,t,n,a,c,l,m,o,d,f,h,i){c[l]&&(d=e.createElement(t),d[n]=c[l],e[a]("head")[0].appendChild(d),e.documentElement.className+=" wf-cached"),function s(){for(d=e[a](t),f="",h=0;h<d.length;h++)i=d[h][n],i.match(m)&&(f+=i);f&&(c[l]="/**/"+f),setTimeout(s,o+=o)}()}(document,"style","innerHTML","getElementsByTagName",localStorage,"tk",/^@font|^\.tk-/,100);
+    script.
+      (function(d) {
+        var config = {
+          kitId: 'tru7kee',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
     
   body
     nav
-      a(href="") Platform
-      a(href="") Implementation
-      a(href="") About
-      a(href="") Resources
-        
-    nav.mobile
+      .logo
+        a(href="/")
+          .powerley-logo
       .hammy-container
         button.hamburger.hamburger--3dy(type="button")
           span.hamburger-box
             span.hamburger-inner
-      .nav-link-container
+      .links
         a(href="") Platform
         a(href="") Implementation
         a(href="") About
@@ -43,8 +49,9 @@ html(lang="en")
     header
       .bg
         .img
-      .header-content
-        h1 Header Zoom and Fade on Scroll
+      .header-container
+        .header-content
+          h1 Header Zoom and Fade on Scroll
     section#about
       h3 This is a remade version of 
         a(href="https://blog.invisionapp.com") Invision's
@@ -55,7 +62,5 @@ html(lang="en")
       a.btn(href="https://github.com/mcansh/header-fade-zoom") View the repo
 
 
-    script(async src="js/jquery-3.0.0.min.js")
-    script(async src="js/modernizr.min.js")
     script(async src="js/myfunctions.min.js")
   

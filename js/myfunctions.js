@@ -34,7 +34,7 @@ $(document).ready(function() {
         if (wScroll <= pContainerHeight) {
 
           $('header .header-content h1').css({
-            'transform' : 'translate(0px, '+ wScroll /6 +'%)'
+            'transform' : 'translate(0px, '+ wScroll /5.75 +'%)'
           });
         }
       }
@@ -46,7 +46,7 @@ $(document).ready(function() {
   $hamburger.on("click", function() {
     $hamburger.toggleClass("is-active");
     // Do something else, like open/close menu
-    $('nav.mobile').toggleClass('open');
+    $('nav').toggleClass('open');
     $('body').toggleClass('fixed');
   });
 

@@ -1,95 +1,94 @@
 nav {
-  width: 100vw;
-  height: 5em;
   position: fixed;
-  visibility: visible;
-  background: transparent;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  box-shadow: 0px 1px 5px transparent; }
-  nav.scroll {
-    background: #324354;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-    z-index: 99; }
-  nav a {
-    color: white;
-    -webkit-transition: 300ms all ease-in-out;
-    transition: 300ms all ease-in-out;
-    text-transform: uppercase;
-    text-decoration: none; }
-    nav a:hover, nav a.active {
-      color: #1eb273; }
-
-nav:not(.mobile) {
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  z-index: 2;
+  height: 5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1; }
-  @media (max-width: 799px) {
-    nav:not(.mobile) {
-      visibility: hidden; } }
-  nav:not(.mobile) a {
-    margin: 0 10px; }
-    nav:not(.mobile) a:last-of-type {
-      margin-right: 60px; }
-
-nav.mobile {
-  visibility: visible;
-  z-index: 998; }
-  nav.mobile.open .nav-link-container {
-    opacity: 1;
-    visibility: visible;
-    height: 100vh;
-    background: #324354;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: 200ms all ease-in;
+  transition: 200ms all ease-in; }
+  nav .logo a .powerley-logo {
+    max-width: 300px;
+    height: 100%;
+    background-image: url("http://powerley.com/media/1056/powerley-logo-2x.png");
+    background-size: cover;
+    background-position: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    nav.mobile.open .nav-link-container a {
-      opacity: 1;
-      visibility: visible; }
-      nav.mobile.open .nav-link-container a:first-of-type {
-        margin-top: 4.6em; }
-  nav.mobile .nav-link-container {
-    opacity: 0;
-    visibility: hidden;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    nav.mobile .nav-link-container a {
-      margin: 20px 0;
-      padding: 0 20px;
-      font-size: 1.5em;
-      opacity: 0;
-      visibility: hidden; }
-  nav.mobile .hammy-container {
-    z-index: 999;
+    display: flex; }
+  @media (min-width: 600px) {
+    nav .links {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media (max-width: 600px) {
+    nav .links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      position: absolute;
+      top: -100vh;
+      -webkit-transition: 250ms all ease-in;
+      transition: 250ms all ease-in;
+      width: 100vw;
+      left: 0; } }
+  nav .links a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    height: 39px;
+    line-height: 39px;
+    padding: 0px 15px;
+    margin: 30px 5px 0px 5px;
+    letter-spacing: 1px;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out; }
+    @media (max-width: 600px) {
+      nav .links a {
+        font-size: 20px; } }
+    nav .links a:hover {
+      color: #1eb273; }
+  nav .hammy-container {
     position: absolute;
     top: 0;
-    left: 0;
-    margin: calc(5em - 70px) 0; }
-  @media (min-width: 800px) {
-    nav.mobile {
-      visibility: hidden; } }
+    left: 0; }
+    @media (min-width: 600px) {
+      nav .hammy-container {
+        display: none; } }
+  nav.scroll {
+    background: #324354;
+    height: 3.5em; }
+  nav.open {
+    background: #1f2a34;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    nav.open .links {
+      top: 5em; }
 
 ::-moz-selection {
   background: #FC6C2B;
@@ -120,17 +119,32 @@ header {
   @media (max-width: 800px) {
     header {
       min-height: 85vh; } }
+  header .header-container {
+    width: 100vw;
+    min-height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 800px) {
+      header .header-container {
+        min-height: 85vh; } }
   header .bg {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -5%;
     right: 0;
     bottom: 0;
     height: 100%;
-    width: 100%; }
+    width: 110%; }
     header .bg .img {
-      background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../manoj-office-hero.png);
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../manoj-office-hero.png);
+      background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../manoj-office-hero.png");
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../manoj-office-hero.png");
       background-position: center;
       background-size: cover;
       height: 110%;
@@ -141,13 +155,9 @@ header {
     width: 90%;
     max-width: 700px;
     height: 100%;
-    position: absolute;
-    -webkit-transform: translate(50%, -10%);
-            transform: translate(50%, -10%); }
+    position: absolute; }
     @media (max-width: 800px) {
       header .header-content {
-        -webkit-transform: translate(0px, 30px);
-                transform: translate(0px, 30px);
         width: 100%;
         bottom: 0; } }
     header .header-content h1 {

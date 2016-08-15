@@ -3,19 +3,12 @@
 "buildSteps": [
 	{
 		"name": "Process All Remaining Files and Folders",
-		"scriptType": 0,
 		"stepType": 1,
 		"uuidString": "2F670C8F-91BC-4CFA-877F-9C1CC90AD2A2"
 		}
 	],
-"creatorBuild": "24457",
+"creatorBuild": "24745",
 "files": {
-	"\/codekit3.config": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/codekit3.config",
-		"oF": 0
-		},
 	"\/css\/_nav.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -77,6 +70,14 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/includes\/powerley.jade": {
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/includes\/powerley.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 1,
@@ -94,7 +95,7 @@
 	"\/js\/jquery-3.0.0.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/js\/jquery-3.0.0.min.min.js",
 		"oF": 0,
 		"sC": 3,
@@ -103,26 +104,11 @@
 	"\/js\/modernizr.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/js\/modernizr.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"\/js\/modernizr.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/modernizr.min.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/js\/modernizr.min.js.map": {
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/js\/modernizr.min.js.map",
-		"oF": 0
 		},
 	"\/js\/myfunctions.js": {
 		"ft": 64,
@@ -160,6 +146,20 @@
 "hooks": [
 	],
 "manualImportLinks": {
+	"\/js\/myfunctions.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/jquery-3.0.0.min.js",
+			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/modernizr.js",
+			"position": 1,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"creationDate": 488312384,
@@ -168,6 +168,7 @@
 	"iconImageName": "meme-wonka"
 	},
 "projectSettings": {
+	"abortBuildOnError": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -342,6 +343,9 @@
 			"active": 0
 			},
 		"react-jsx-compat": {
+			"active": 0
+			},
+		"react-jsx-self": {
 			"active": 0
 			},
 		"react-jsx-source": {
@@ -737,6 +741,10 @@
 			"active": 0,
 			"optionString": "{'code': 80, 'comments': 80, 'tabWidth': 4, 'ignoreUrls': true}"
 			},
+		"max-lines": {
+			"active": 0,
+			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
 		"max-nested-callbacks": {
 			"active": 0,
 			"optionString": "{'max': 10}"
@@ -748,6 +756,10 @@
 		"max-statements": {
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"multiline-ternary": {
+			"active": 0,
+			"optionString": ""
 			},
 		"new-cap": {
 			"active": 0,
@@ -980,6 +992,10 @@
 		"no-magic-numbers": {
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
+			},
+		"no-mixed-operators": {
+			"active": 0,
+			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -1229,6 +1245,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-rename": {
+			"active": 0,
+			"optionString": "{'ignoreDestructuring': false, 'ignoreImport': false, 'ignoreExport': false}"
+			},
 		"no-var": {
 			"active": 0,
 			"optionString": ""
@@ -1248,6 +1268,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"object-curly-newline": {
+			"active": 0,
+			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
 			},
 		"object-curly-spacing": {
 			"active": 0,
@@ -1325,6 +1349,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"rest-spread-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
 		"semi": {
 			"active": 0,
 			"optionString": "'always', {'omitLastInOneLineBlock': false}"
@@ -1373,6 +1401,10 @@
 			"active": 0,
 			"optionString": "'never'"
 			},
+		"unicode-bom": {
+			"active": 0,
+			"optionString": "'never'"
+			},
 		"use-isnan": {
 			"active": 1,
 			"optionString": ""
@@ -1407,6 +1439,7 @@
 			}
 		},
 	"externalServerAddress": "http:\/\/localhost:8888",
+	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
 		"asi": {

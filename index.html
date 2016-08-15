@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+
+<!--
+========================================================================================
+========================================================================================
+========================================================================================
+ ______   ______     __     __     ______     ______     __         ______     __  __
+/\  == \ /\  __ \   /\ \  _ \ \   /\  ___\   /\  == \   /\ \       /\  ___\   /\ \_\ \
+\ \  _-/ \ \ \/\ \  \ \ \/ ".\ \  \ \  __\   \ \  __<   \ \ \____  \ \  __\   \ \____ \
+ \ \_\    \ \_____\  \ \__/".~\_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_____\  \/\_____\
+  \/_/     \/_____/   \/_/   \/_/   \/_____/   \/_/ /_/   \/_____/   \/_____/   \/_____/
+
+========================================================================================
+======================== http://www.powerley.com/about/careers =========================
+========================================================================================
+--><!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Header Fade/Zoom</title>
@@ -16,34 +30,42 @@
     <meta name="twitter:title" content="Logan McAnsh">
     <meta name="twitter:description" content="Logan McAnsh">
     <meta name="twitter:image" content="SOME URL HERE">
-    <script src="https://use.typekit.net/tru7kee.js"></script>
+    <script>!function(e,t,n,a,c,l,m,o,d,f,h,i){c[l]&&(d=e.createElement(t),d[n]=c[l],e[a]("head")[0].appendChild(d),e.documentElement.className+=" wf-cached"),function s(){for(d=e[a](t),f="",h=0;h<d.length;h++)i=d[h][n],i.match(m)&&(f+=i);f&&(c[l]="/**/"+f),setTimeout(s,o+=o)}()}(document,"style","innerHTML","getElementsByTagName",localStorage,"tk",/^@font|^\.tk-/,100);</script>
     <script>
-      try{Typekit.load({ async: true });}catch(e){}
+      (function(d) {
+        var config = {
+          kitId: 'tru7kee',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
       
     </script>
   </head>
   <body>
-    <nav><a href="">Platform</a><a href="">Implementation</a><a href="">About</a><a href="">Resources</a></nav>
-    <nav class="mobile">
+    <nav>
+      <div class="logo"><a href="/">
+          <div class="powerley-logo"></div></a></div>
       <div class="hammy-container">
         <button type="button" class="hamburger hamburger--3dy"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
       </div>
-      <div class="nav-link-container"><a href="">Platform</a><a href="">Implementation</a><a href="">About</a><a href="">Resources</a></div>
+      <div class="links"><a href="">Platform</a><a href="">Implementation</a><a href="">About</a><a href="">Resources</a></div>
     </nav>
     <header>
       <div class="bg">
         <div class="img"></div>
       </div>
-      <div class="header-content">
-        <h1>Header Zoom and Fade on Scroll</h1>
+      <div class="header-container">
+        <div class="header-content">
+          <h1>Header Zoom and Fade on Scroll</h1>
+        </div>
       </div>
     </header>
     <section id="about">
       <h3>This is a remade version of <a href="https://blog.invisionapp.com">Invision's</a> header that zooms and fades on scroll.</h3>
       <p>It's pretty rad.</p><a href="https://github.com/mcansh/header-fade-zoom" class="btn">View the repo</a>
     </section>
-    <script async src="js/jquery-3.0.0.min.js"></script>
-    <script async src="js/modernizr.min.js"></script>
     <script async src="js/myfunctions.min.js"></script>
   </body>
 </html>
