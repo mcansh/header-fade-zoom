@@ -8,21 +8,25 @@ nav
   justify-content: flex-start
   transition: 200ms all ease-in
   .logo
+    position: absolute
+    top: 0
+    left: 0
     a
       .powerley-logo
-        max-width: 300px
-        height: 100%
+        width: 150px
+        height: 5em
         background:
-          image: url('http://powerley.com/media/1056/powerley-logo-2x.png')
-          size: cover
+          image: url(http://powerley.com/media/1056/powerley-logo-2x.png)
+          size: contain
           position: center
-        flex-grow: 1
-        display: flex
+          repeat: no-repeat
+        margin-left: 15px
   .links
-    @media (min-width: 600px)
+    @media (min-width: 800px)
+      flex-grow: 1
       justify-content: flex-end
       display: flex
-    @media (max-width: 600px)
+    @media (max-width: 800px)
       display: flex
       justify-content: center
       align-items: center
@@ -42,19 +46,21 @@ nav
       margin: 30px 5px 0px 5px
       letter-spacing: 1px
       transition: all 300ms ease-out
-      @media (max-width: 600px)
+      @media (max-width: 800px)
         font-size: 20px
       &:hover
         color: $powerley-green
   .hammy-container
     position: absolute
-    top: 0
-    left: 0
-    @media (min-width: 600px)
+    top: 10px
+    right: 0
+    height: 5em
+    @media (min-width: 800px)
       display: none
   &.scroll
     background: $powerley-blue
-    height: 3.5em
+    .hammy-container
+      top: 13px
   &.open
     background: darken($powerley-blue, 10%)
     height: 100%
