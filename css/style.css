@@ -65,7 +65,7 @@ nav {
     height: 39px;
     line-height: 39px;
     padding: 0px 15px;
-    margin: 30px 5px 0px 5px;
+    margin: 0 10px;
     letter-spacing: 1px;
     -webkit-transition: all 300ms ease-out;
     transition: all 300ms ease-out; }
@@ -83,7 +83,11 @@ nav {
       nav .hammy-container {
         display: none; } }
   nav.scroll {
-    background: #324354; }
+    background: #324354;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; }
     nav.scroll .hammy-container {
       top: 13px; }
   nav.open {
