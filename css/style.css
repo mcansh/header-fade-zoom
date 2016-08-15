@@ -15,17 +15,10 @@ nav {
   -webkit-transition: 200ms all ease-in;
   transition: 200ms all ease-in; }
   nav .logo {
-    position: absolute;
-    top: 0;
-    left: 0; }
+    margin-left: 15px; }
     nav .logo a .powerley-logo {
       width: 150px;
-      height: 5em;
-      background-image: url(http://powerley.com/media/1056/powerley-logo-2x.png);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin-left: 15px; }
+      height: 5em; }
   @media (min-width: 800px) {
     nav .links {
       -webkit-box-flex: 1;
