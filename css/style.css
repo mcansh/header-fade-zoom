@@ -15,7 +15,9 @@ nav {
   -webkit-transition: 200ms all ease-in;
   transition: 200ms all ease-in; }
   nav .logo {
-    margin-left: 15px; }
+    position: absolute;
+    top: 15px;
+    left: 15px; }
     nav .logo a .powerley-logo {
       width: 150px;
       height: 5em; }
@@ -72,7 +74,7 @@ nav {
     top: 10px;
     right: 0;
     height: 5em; }
-    @media (min-width: 800px) {
+    @media (min-width: 801px) {
       nav .hammy-container {
         display: none; } }
   nav.scroll {
@@ -164,6 +166,8 @@ header {
     margin-left: -350px; }
     @media (max-width: 800px) {
       header .header-content {
+        -webkit-transform: translate(0px, 30px);
+                transform: translate(0px, 30px);
         width: 100%;
         bottom: 0;
         left: 0;
@@ -182,7 +186,6 @@ header {
           font-size: 3em; } }
       @media (max-width: 800px) {
         header .header-content h1 {
-          position: static;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;

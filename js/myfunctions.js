@@ -17,10 +17,10 @@ $(document).ready(function() {
       offset = offset + height / 1.5;
       var calc = 1 - (wScroll - offset + range) / range;
 
-
       var size = (wScroll/3000)+1;
-      header_img.css({ 'opacity': Math.max(0,calc) });
-      $('header .header-content').css({ 'opacity': Math.max(0,calc) });
+      // header_img.css({ 'opacity': Math.max(0,calc) });
+      header_img.css({ 'opacity': Math.min(1, Math.max(0, calc))});
+      $('header .header-content').css({ 'opacity': Math.min(1, Math.max(0, calc))});
       header_img.css('transform', 'scale3d('+size+', '+size+', '+size+')');
 
       if ((width >= 800)) {
