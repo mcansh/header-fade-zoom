@@ -100,7 +100,9 @@ nav {
   background: #FC6C2B;
   color: white; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0; }
 
@@ -173,7 +175,8 @@ header {
       top: 50%;
       margin-top: -50px;
       position: absolute;
-      width: 100%; }
+      width: 100%;
+      z-index: 2; }
       @media (max-width: 360px) {
         header .header-content h1 {
           font-size: 3em; } }
@@ -210,19 +213,19 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   #about > * {
     margin: 20px 0; }
   #about a.btn {
     border: 1px solid #1eb273;
-    color: #f36;
+    color: white;
     font-size: 15px;
     font-family: "brandon-grotesque", brandon-grotesque, sans-serif;
     letter-spacing: .125em;
     font-weight: 700;
     padding: 20px 40px;
     border-radius: 5px;
-    color: #fff;
     line-height: 1em;
     font-weight: 700;
     text-transform: uppercase;
@@ -238,4 +241,19 @@ a {
   transition: 300ms all ease-in-out; }
   a:hover {
     color: #FC6C2B; }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  width: 100vw; }
 /*# sourceMappingURL=style.css.map */

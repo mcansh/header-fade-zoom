@@ -7,7 +7,7 @@
 		"uuidString": "2F670C8F-91BC-4CFA-877F-9C1CC90AD2A2"
 		}
 	],
-"creatorBuild": "24745",
+"creatorBuild": "24856",
 "files": {
 	"\/css\/_nav.sass": {
 		"aP": 0,
@@ -95,44 +95,44 @@
 	"\/js\/jquery-3.0.0.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/js\/jquery-3.0.0.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"\/js\/modernizr.js": {
+	"\/js\/main.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/modernizr.min.js",
+		"oAP": "\/js\/main.min.js",
+		"oF": 3,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/main.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/main.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/js\/main.min.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/js\/main.min.js.map",
+		"oF": 0
 		},
 	"\/js\/myfunctions.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/js\/myfunctions.min.js",
 		"oF": 1,
 		"sC": 3,
 		"tS": 0
-		},
-	"\/js\/myfunctions.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/myfunctions.min.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/js\/myfunctions.min.js.map": {
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/js\/myfunctions.min.js.map",
-		"oF": 0
 		},
 	"\/manoj-office-hero.png": {
 		"ft": 32768,
@@ -415,6 +415,7 @@
 	"browserRefreshDelay": 0,
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
+	"cleanBuild": 1,
 	"coffeeLintFlags2": {
 		"arrow_spacing": {
 			"active": 0,
@@ -553,6 +554,7 @@
 			"flagValue": -1
 			}
 		},
+	"esLintConfigFileHandlingType": 1,
 	"esLintEnvironmentsMask": 1,
 	"esLintRules": {
 		"accessor-pairs": {
